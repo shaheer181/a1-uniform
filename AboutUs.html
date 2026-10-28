@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 Uniforms - About Us</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bo">
+    <nav>
+        <div class="logoo"><span>A-1</span>Uniforms</div>
+        <div class="nav-links">
+           <a href="./index.html">Home</a>
+            <a href="./AboutUs.html">About Us</a>
+             <a href="./product.html">Product</a>
+              <a href="./feedback.html">Feedback</a>
+            <a href="./contact.html">Contact Us</a>
+        </div>
+    </nav>
+    <main>
+        <section class="hero container">
+            <h1 class="hero-title animate-in">About Us</h1>
+            <p class="hero-subtitle animate-in">Dedicated to providing premium quality and perfect fits for your professional and academic life.</p>
+        </section>
+
+        <section class="main-section light-bg animate-in">
+            <div class="container desc-text">
+                <h2 class="section-heading">Our Commitment to Quality</h2>
+                <p>In this section, we just have a heading of About Us and a descriptive paragraph for our website about our clothes, quality, sizing and so on. We take pride in our range, from the everyday essentials in our <span style="font-weight: 600;">School Wear Collection</span> to precise performance gear and detailed accessories. We use only the finest fabrics and pay meticulous attention to detail.</p>
+            </div>
+        </section>
+
+        <section class="main-section animate-in">
+            <div class="container">
+                <h2 class="section-heading">The A1 Difference</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-icon">&#128085;</div> <h3 class="card-title">Premium Quality</h3>
+                        <p>We craft our uniforms to last, using durable materials that look great day after day, wash after wash.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">&#128207;</div> <h3 class="card-title">Perfect Sizing</h3>
+                        <p>Our meticulously refined sizing guides ensure you find the absolute perfect fit for comfort and confidence.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">&#127891;</div> <h3 class="card-title">Comprehensive Range</h3>
+                        <p>Explore our wide selection, including essential school uniforms, performance-ready P.T. gear, badges, socks, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-in, .hero-title, .card');
+            
+            const observerOptions = {
+                root: null, // use the viewport
+                threshold: 0.1 // trigger when 10% of element is visible
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Stop observing after it has animated in once
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+<footer>
+  <div class="footer-row">
+    <div class="footer-column">
+      <h3>Brand Name: A1-Uniforms</h3>
+      <p>Quality and sustainability in every detail. Delivering professional, modern solutions for your unique business needs.</p>
+    </div>
+
+  <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+       <li><a href="http://127.0.0.1:5500/project/e/home.html" style="color: white; text-decoration: none;"> Home </a></li> 
+        <li><a href="http://127.0.0.1:5500/project/e/AboutUs.html" style="color: white; text-decoration: none;"> About Us </a></li>
+        <li><a href="http://127.0.0.1:5500/project/e/product.html" style="color: white; text-decoration: none;"> Our Product </a></li>
+        <li><a href="http://127.0.0.1:5500/project/e/feedback.html" style="color: white; text-decoration: none;"> Feedback </a></li>
+        <li><a href="http://127.0.0.1:5500/project/e/contact.html" style="color: white; text-decoration: none;"> Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <ul>
+        <li>Email 
+            <li>  Jawariya@gmail.com  <li>
+               <li> Shaheer@gmail.com</li>
+                <li>Shahzar@gmail.com</li>
+                 <li>Kashan@gmail.com</li>
+                   <li>Saif@gmail.com</li>
+            </li>
+        
+        <li>contact@example.com</li>
+        <li>+1 (555) 012-3456</li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
+  
+</body>
+</html>
